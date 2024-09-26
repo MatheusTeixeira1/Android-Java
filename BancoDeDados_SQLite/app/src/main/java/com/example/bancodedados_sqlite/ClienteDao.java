@@ -49,9 +49,9 @@ public class ClienteDao {
             Cliente cliente = new Cliente();
             cliente.setId(c.getLong(0));
             cliente.setNome(c.getString(1));
-            cliente.setNome(c.getString(2));
-            cliente.setNome(c.getString(3));
-            cliente.setNome(c.getString(4));
+            cliente.setFone(c.getString(2));
+            cliente.setEmail(c.getString(3));
+            cliente.setObservacao(c.getString(4));
             lista.add(cliente);
         }
         return lista;

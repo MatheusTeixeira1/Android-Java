@@ -88,15 +88,15 @@ public class AtvCadastro extends AppCompatActivity implements View.OnClickListen
             finish();
         } else if (v == btnGravar) {
             c.setNome(edtNome.getText().toString());
-            c.setNome(edtNome.getText().toString());
-            c.setEmail(edtNome.getText().toString());
+            c.setFone(edtFone.getText().toString());
+            c.setEmail(edtEmail.getText().toString());
             c.setObservacao(edtObs.getText().toString());
 
             if(acao.equals("Inserir")){
                 long id = dao.inserir(c);
                 Toast.makeText(this, "Cliente " + c.getNome() + " foi criado com o id = " + id, Toast.LENGTH_LONG).show();
             }else{
-                long id = dao.inserir(c);
+                long id = dao.alterar(c);
                 Toast.makeText(this, "Cliente " + c.getNome() + " foi alterado", Toast.LENGTH_LONG).show();
 
             }

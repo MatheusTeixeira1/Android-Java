@@ -5,8 +5,16 @@
     <string name="txtCódigo">Código</string>
     <string name="txtFone">Fone</string>
     <string name="txtEmail">Email</string>
+    <string name="txtObs">Observalções</string>
 
     <string name="txtBtnInserir">Inserir</string>
     <string name="txtBtnVoltar">Voltar</string>
+    <string name="txtBtnDeletar">Deletar</string>
+
+    <string name="hintImputCodigo">00</string>
+    <string name="hintImputNome">Nome da pessoa</string>
+    <string name="hintImputFone">(00) 0000-0000</string>
+    <string name="hintImputEmail">exemplo@gmail.com</string>
+    <string name="hintImputObs">Observações a serem feitas</string>
 
 </resources>

@@ -12,14 +12,17 @@ public class Conexao extends SQLiteOpenHelper {
 
     private static final String SQL_CREATE = "create table cliente(" +
     "id integer primary key autoincrement," +
-    "nome varchar(50), fone varchat(20)," +
+    "nome varchar(50)," +
+    "fone varchat(20)," +
     "email varchar(50)," +
-            " observacao text);";
+    "observacao text);";
+
 
     public Conexao(@Nullable Context context) {super(context, NAME, null, VERSION);}
 
     @Override
     public void onCreate(SQLiteDatabase db) {
+        db.execSQL("DROP TABLE IF EXISTS Banco.db");
         db.execSQL(SQL_CREATE);
     }
 
