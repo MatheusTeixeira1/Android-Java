@@ -87,7 +87,7 @@ public class AtvCadastro extends AppCompatActivity implements View.OnClickListen
             Toast.makeText(this, "Cliente " + c.getNome() + " foi excluido!", Toast.LENGTH_LONG).show();
             finish();
         } else if (v == btnGravar) {
-            c.setNome(edtNome.getText().toString());
+                c.setNome(edtNome.getText().toString());
             c.setFone(edtFone.getText().toString());
             c.setEmail(edtEmail.getText().toString());
             c.setObservacao(edtObs.getText().toString());
