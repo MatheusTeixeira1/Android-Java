@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".criarProduto">
+    tools:context=".AvtCriarProduto">
 
     <TextView
         android:id="@+id/textView2"
@@ -20,7 +20,7 @@
         app:layout_constraintVertical_bias="0.022" />
 
     <EditText
-        android:id="@+id/imputNome"
+        android:id="@+id/inputNome"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:ems="10"
@@ -34,7 +34,7 @@
         app:layout_constraintVertical_bias="0.105" />
 
     <EditText
-        android:id="@+id/imputCusto"
+        android:id="@+id/inputCusto"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:ems="10"
@@ -48,7 +48,7 @@
         app:layout_constraintVertical_bias="0.209" />
 
     <EditText
-        android:id="@+id/imputVenda"
+        android:id="@+id/inputVenda"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:ems="10"
@@ -98,7 +98,7 @@
         app:layout_constraintVertical_bias="0.727" />
 
     <EditText
-        android:id="@+id/imputUnidade"
+        android:id="@+id/inputUnidade"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:ems="10"
@@ -112,14 +112,14 @@
         app:layout_constraintVertical_bias="0.412" />
 
     <Spinner
-        android:id="@+id/imputCategoria"
+        android:id="@+id/inputCategoria"
         android:layout_width="300dp"
         android:layout_height="50dp"
         tools:layout_editor_absoluteX="36dp"
         tools:layout_editor_absoluteY="420dp" />
 
     <EditText
-        android:id="@+id/imputEstoque"
+        android:id="@+id/inputEstoque"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:ems="10"

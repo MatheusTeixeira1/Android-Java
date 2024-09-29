@@ -12,12 +12,12 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class criarProduto extends AppCompatActivity implements View
+public class AvtCriarProduto extends AppCompatActivity implements View
 
         .OnClickListener{
     Button btnGravarProduto, btnVoltar;
 
-    EditText imputNome, imputCusto, imputPrecoVenda, imputUnidade, imputEstoque;
+    EditText inputNome, inputCusto, inputPrecoVenda, inputUnidade, inputEstoque;
 
     Spinner spnCategorias;
 
@@ -42,17 +42,26 @@ public class criarProduto extends AppCompatActivity implements View
         btnGravarProduto = findViewById(R.id.btnGravarProduto);
         btnGravarProduto.setOnClickListener(this);
 
-        imputNome = findViewById(R.id.imputNome);
-        imputCusto = findViewById(R.id.imputCusto);
-        imputPrecoVenda = findViewById(R.id.imputVenda);
-        imputUnidade = findViewById(R.id.imputUnidade);
-        imputEstoque = findViewById(R.id.imputEstoque);
+        inputNome = findViewById(R.id.inputNome);
+        inputCusto = findViewById(R.id.inputCusto);
+        inputPrecoVenda = findViewById(R.id.inputVenda);
+        inputUnidade = findViewById(R.id.inputUnidade);
+        inputEstoque = findViewById(R.id.inputEstoque);
 
-        spnCategorias = findViewById(R.id.imputCategoria);
+        spnCategorias = findViewById(R.id.inputCategoria);
     }
 
     @Override
     public void onClick(View view) {
-
+        if(view == btnVoltar){
+            finish();
+        }else if(view == btnGravarProduto) {
+            produto.setNome(inputNome.getText().toString());
+            produto.setCusto(Float.parseFloat(inputCusto.getText().toString()));
+            produto.setPrecoVenda(Float.parseFloat(inputPrecoVenda.getText().toString()));
+            produto.setUnidade(inputUnidade.getText().toString());
+            produto.setQuantidade(Integer.parseInt(inputEstoque.getText().toString()));
+            //produto.setCategoria((String) spnCategorias.getSelectedItem());
+        }
     }
 }
