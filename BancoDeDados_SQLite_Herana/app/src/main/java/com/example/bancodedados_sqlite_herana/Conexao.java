@@ -30,7 +30,7 @@ public class Conexao extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("DROP TABLE IF EXISTS Banco.db");
         db.execSQL(SQL_CREATE_CATEGORIA);
-        db.execSQL(SQL_CREATE_PRODUTO);
+        //db.execSQL(SQL_CREATE_PRODUTO);
     }
 
     @Override

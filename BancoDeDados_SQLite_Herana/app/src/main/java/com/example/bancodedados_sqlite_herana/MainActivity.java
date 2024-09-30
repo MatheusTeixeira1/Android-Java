@@ -52,6 +52,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             return insets;
         });
         inicializarEntidades();
+        atualizarListas();
     }
 
     public void inicializarEntidades(){
@@ -68,6 +69,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         listViewCategoiras.setOnItemClickListener(this);
 
         inputCriarCategoria = findViewById(R.id.inputCategoria);
+
+        categoriaDao = new CategoriaDao(this);
     }
     private void atualizarListas() {
         listaCategorias = categoriaDao.listar();
@@ -80,15 +83,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if(view == btnNavCriarProduto){
             abrirCadastroProduto();
         } else if (view == btnCriarCategoria) {
+
             categoria = new Categoria();
             categoria.setNome(inputCriarCategoria.getText().toString());
-            System.out.println("------------------------");
-            System.out.println("meu pau de asas");
-
-            System.out.println(inputCriarCategoria.getText().toString());
-            System.out.println("------------------------");
-            long id = categoriaDao.inserir(categoria);
-            Toast.makeText(this, "Categoria " + categoria.getNome() + " foi criado com o id = " + id, Toast.LENGTH_LONG).show();
+            categoriaDao.inserir(categoria);
             atualizarListas();
         }
     }
