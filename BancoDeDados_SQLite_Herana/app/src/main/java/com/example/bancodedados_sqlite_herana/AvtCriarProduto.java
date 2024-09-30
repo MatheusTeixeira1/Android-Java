@@ -48,7 +48,7 @@ public class AvtCriarProduto extends AppCompatActivity implements View
         inputUnidade = findViewById(R.id.inputUnidade);
         inputEstoque = findViewById(R.id.inputEstoque);
 
-        spnCategorias = findViewById(R.id.inputCategoria);
+        spnCategorias = findViewById(R.id.inputSpnCategoria);
     }
 
     @Override

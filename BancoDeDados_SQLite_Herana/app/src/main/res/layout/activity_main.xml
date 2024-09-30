@@ -7,20 +7,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/editTextText"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:ems="10"
-        android:hint="@string/hintCriarCategoria"
-        android:inputType="text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.854" />
-
     <TextView
         android:id="@+id/textView10"
         android:layout_width="wrap_content"
@@ -34,7 +20,7 @@
         app:layout_constraintVertical_bias="0.789" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnCriarCategoria"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/txtBtnCriarCategoria"
@@ -46,7 +32,7 @@
         app:layout_constraintVertical_bias="0.938" />
 
     <ListView
-        android:id="@+id/listView"
+        android:id="@+id/listaProdutos"
         android:layout_width="400dp"
         android:layout_height="200dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -69,6 +55,7 @@
         app:layout_constraintVertical_bias="0.036" />
 
     <ListView
+        android:id="@+id/listaCategoria"
         android:layout_width="400dp"
         android:layout_height="200dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -100,5 +87,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.38" />
+
+    <EditText
+        android:id="@+id/inputCategoria"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:hint="@string/hintCriarCategoria"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.853" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
