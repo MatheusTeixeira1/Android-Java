@@ -71,12 +71,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         inputCriarCategoria = findViewById(R.id.inputCategoria);
 
         categoriaDao = new CategoriaDao(this);
+        produtoDao = new ProdutoDao(this);
     }
     private void atualizarListas() {
         listaCategorias = categoriaDao.listar();
         listAdapterCategorias = new ArrayAdapter<>(this,
                 android.R.layout.simple_list_item_1, listaCategorias);
         listViewCategoiras.setAdapter(listAdapterCategorias);
+
+        listaProdutos = produtoDao.listar();
+        listAdapterProdutos = new ArrayAdapter<>(this,
+                android.R.layout.simple_list_item_1, listaProdutos);
+        listViewProdutos.setAdapter(listAdapterProdutos);
     }
     @Override
     public void onClick(View view) {

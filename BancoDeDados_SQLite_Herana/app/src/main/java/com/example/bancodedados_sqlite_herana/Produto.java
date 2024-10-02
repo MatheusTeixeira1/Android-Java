@@ -3,19 +3,20 @@ package com.example.bancodedados_sqlite_herana;
 import java.io.Serializable;
 
 public class Produto implements Serializable {
-    private int id;
+    private Long id;
     private String nome;
     private float custo;
     private float precoVenda;
     private String unidade;
     private int quantidade;
-    private Categoria categoria;
+    //private Categoria categoria;
+    private Long categoria;
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -59,23 +60,28 @@ public class Produto implements Serializable {
         this.quantidade = quantidade;
     }
 
-    public Categoria getCategoria() {
+    public Long getCategoria() {
         return categoria;
     }
 
-    public void setCategoria(Categoria categoria) {
+    public void setCategoria(Long categoria) {
         this.categoria = categoria;
     }
 
     public Produto() {
     }
 
-    public Produto(String nome, float custo, float precoVenda, String unidade, int quantidade, Categoria categoria) {
+    public Produto(String nome, float custo, float precoVenda, String unidade, int quantidade, Long categoria) {
         this.nome = nome;
         this.custo = custo;
         this.precoVenda = precoVenda;
         this.unidade = unidade;
         this.quantidade = quantidade;
         this.categoria = categoria;
+    }
+
+    @Override
+    public String toString(){
+        return "ID: " + this.id + "Nome: " + this.nome + "Preço de Venda: " + this.precoVenda;
     }
 }
