@@ -2,6 +2,7 @@ package com.example.bancodedados_sqlite_herana;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -18,7 +19,7 @@ import java.util.List;
 
 public class AvtCriarProduto extends AppCompatActivity implements View
 
-        .OnClickListener{
+        .OnClickListener, AdapterView.OnItemClickListener{
     Button btnGravarProduto, btnVoltar, btnCriarCategoria;
 
     EditText inputNome, inputCusto, inputPrecoVenda, inputUnidade, inputEstoque, inputCriarCategoria;
@@ -32,7 +33,7 @@ public class AvtCriarProduto extends AppCompatActivity implements View
     CategoriaDao categoriaDao;
 
     List<Categoria> categorias;
-
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -117,5 +118,10 @@ public class AvtCriarProduto extends AppCompatActivity implements View
             categoriaDao.inserir(categoria);
             carregarSpinner();
         }
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
     }
 }
