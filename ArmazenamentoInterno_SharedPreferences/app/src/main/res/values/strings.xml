@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Armazenamento Interno_(SharedPreferences)</string>
+    <string name="toggleButtonSim">Sim</string>
+    <string name="toggleButtonNão">Não</string>
+    <string name="strCheckBox">Todos os Assuntos</string>
+    <string name="btnSalvar">Salvar</string>
+</resources>
