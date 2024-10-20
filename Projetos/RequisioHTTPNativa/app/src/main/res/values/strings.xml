@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">RequisioHTTPNativa</string>
+    <string name="txtImput">CEP</string>
+    <string name="txtBtn">Buscar</string>
+    <string name="hintInput">Digite seu CEP</string>
+</resources>
