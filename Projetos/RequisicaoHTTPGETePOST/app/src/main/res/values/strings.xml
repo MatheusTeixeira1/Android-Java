@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">RequisicaoHTTPGETePOST</string>
+    <string name="btnPost">Inserir Fabricande</string>
+    <string name="btnGet"> Consultar Fabricante</string>
+    <string name="hintNomeDoFabricante">Digite o nome do Fabricante</string>
+    <string name="txtRespostaRequisição">Resposta da Requisição</string>
+    <string name="txtListaFabticantes">Lista de Fabticantes</string>
+</resources>
