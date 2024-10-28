@@ -96,6 +96,37 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     Log.e("Erro", t.getMessage());
                 }
             });
+        }else if (v == btnPost) {
+
+            Fabricante fab = new Fabricante(edtNome.getText().toString());
+
+            Call<Fabricante> call = service.postFabricante(fab);
+            call.enqueue(new Callback<Fabricante>() {
+                @Override
+                public void onResponse(Call<Fabricante> call, Response<Fabricante> response) {
+                    if (response.isSuccessful()) {
+                        Fabricante fabSalvo = response.body();
+                        String str = "Id: " + fabSalvo.getId() + " " +
+                                "Nome: " + fabSalvo.getNome();
+
+                        edtResposta.setText(str);
+                        Toast.makeText(MainActivity.this,
+                                "Fabricante inserido com sucesso!",
+                                Toast.LENGTH_SHORT).show();
+                    } else {
+                        Log.e("Erro", response.toString());
+                    }
+                }
+
+                @Override
+                public void onFailure(Call<Fabricante> call, Throwable t) {
+                    Toast.makeText(MainActivity.this,
+                            "Ocorreu um erro na requisição",
+                            Toast.LENGTH_SHORT).show();
+                    Log.e("Erro", t.getMessage());
+                }
+            });
         }
+
     }
 }
